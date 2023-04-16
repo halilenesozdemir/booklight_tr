@@ -1,0 +1,21 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "extends": ["eslint:recommended"],
+  "overrides": [
+    {
+      "files": ["**/*.ejs"],
+      "parser": "babel-eslint",
+      "plugins": ["ejs"],
+      "extends": ["plugin:ejs/recommended"]
+    }
+  ],
+  "plugins": ["ejs"],
+  "rules": {
+    "ejs/no-invalid-escape": "error",
+    "ejs/no-undef": "error"
+    // diğer EJS kuralları burada eklenebilir
+  }
+}
