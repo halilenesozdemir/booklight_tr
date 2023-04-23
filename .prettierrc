@@ -1,0 +1,18 @@
+{
+  "overrides": [
+    {
+      "files": "*.ejs",
+      "options": {
+        "printWidth": 100,
+        "parser": "html",
+        "htmlWhitespaceSensitivity": "ignore",
+        "proseWrap": "preserve",
+        "semi": false,
+        "singleQuote": true,
+        "quoteProps": "as-needed",
+        "jsxSingleQuote": true,
+        "jsxBracketSameLine": false
+      }
+    }
+  ]
+}

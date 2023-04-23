@@ -1,16 +1,16 @@
-import Book from '../models/bookModel.js';
+import Book from "../models/bookModel.js";
 
 const createBook = async (req, res) => {
   try {
     const book = await Book.create(req.body);
     res.status(201).json({
       succeeded: true,
-      book
+      book,
     });
   } catch (error) {
     res.status(500).json({
       succeeded: false,
-      error
+      error,
     });
   }
 };
@@ -18,14 +18,14 @@ const createBook = async (req, res) => {
 const getAllBooks = async (req, res) => {
   try {
     const books = await Book.find({});
-    res.status(200).json({
-      succeeded: true,
-      books
+    res.status(200).render("books", {
+      books,
+      link: "books",
     });
   } catch (error) {
     res.status(500).json({
       succeeded: false,
-      error
+      error,
     });
   }
 };
